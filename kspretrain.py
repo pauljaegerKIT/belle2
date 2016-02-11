@@ -3,7 +3,7 @@ __author__ = 'pjaeger'
 """
 Prepare the data for training:
 Write out necessary Variables 
-to accelerate workflow in a parallel processing.
+to accelerate workflow via parallel processing.
 
 """
 
@@ -17,11 +17,14 @@ import sys
 inputMdstList(sys.argv[1])
 preTrainingDir = sys.argv[3]
 
+# load reconstructed particles. 
 stdVeryLoosePi()
 reconstructDecay('K_S0:ks -> pi-:all pi+:all','')
+# perform a fit on the reconstructed vertex.
 vertexKFit('K_S0:ks', -1)
 applyCuts('K_S0:ks','0.477614<M<0.517614')
 
+# choose variables for training.
 variables = [
 
     'p',
@@ -33,6 +36,8 @@ variables = [
     'daughter(1,distance)',
 ]
 
+
+# prepare training and write out variables.
 teacher = register_module('TMVATeacher')
 teacher.param('workingDirectory', preTrainingDir)
 teacher.param('prefix', sys.argv[2])
