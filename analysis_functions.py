@@ -157,16 +157,16 @@ def getInfo(tree):
      info["pdg"]= 310
      info["truth"]= "kstruthtree"
      info["motherstring"] = 'K_S0_MC_MOTHER_ID'
-     info["sigfactor"] = 3 #* 0.692
-     info["truthfactor"] = 0.5 #* 0.692 #incl mcdecayfinderbug
+     info["sigfactor"] = 3
+     info["truthfactor"] = 0.5
      info["status"]=  'K_S0_mcErrors'
     elif tree == "ks00tree":
      info["pdgstring"] = "K_S0_mcPDG"
      info["pdg"]= 310
      info["truth"]= "kstruthtree"
      info["motherstring"] = 'K_S0_MC_MOTHER_ID'
-     info["sigfactor"] = 3 #* 0.3069
-     info["truthfactor"] = 0.5# * 0.3069 #incl mcdecayfinderbug
+     info["sigfactor"] = 3
+     info["truthfactor"] = 0.5
      info["status"]=  'K_S0_mcErrors'
         
      return info
