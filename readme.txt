@@ -17,7 +17,7 @@ the CP-Violation shall be measured. The Final DataFrame is analyzed via statisti
 fit on the deltaT distrubion determines the wanted parameters.
   
 functions.py:  
-functions for statistics, fitting, and calculating the uncertainty.
+Functions for statistics, fitting, and calculating the uncertainty.
 
 myplot.py:
 Classes for plotting and fitting.	
